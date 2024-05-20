@@ -7,7 +7,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
   .setTitle('Chat API')
-  .setDescription('The onlie chat API')
+  .setDescription('The onlie web chat API')
   .setVersion('1.0')
   .build();
   const document = SwaggerModule.createDocument(app, config);
