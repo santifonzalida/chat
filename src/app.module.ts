@@ -9,6 +9,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MessagesModule } from './messages/messages.module';
 import { DatabaseModule } from './database/database.module';
+import { ChatModule } from './chats/chats.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { DatabaseModule } from './database/database.module';
     }), 
     MessagesModule,
     DatabaseModule,
+    ChatModule,
   ],
   controllers: [AppController],
   providers: [AppService, AppGateway],
