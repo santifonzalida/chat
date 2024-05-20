@@ -4,6 +4,7 @@ import { environments } from './environments';
 import config from './config';
 import * as Joi from 'joi';
 
+import { AppGateway } from './app.gateway';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MessagesModule } from './messages/messages.module';
@@ -25,6 +26,6 @@ import { DatabaseModule } from './database/database.module';
     DatabaseModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AppGateway],
 })
 export class AppModule {}
