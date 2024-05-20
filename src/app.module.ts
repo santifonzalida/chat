@@ -7,7 +7,7 @@ import * as Joi from 'joi';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MessagesModule } from './messages/messages.module';
-import { MessagesService } from './messages/services/messages.service';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
@@ -21,7 +21,8 @@ import { MessagesService } from './messages/services/messages.service';
         DATABASE_PORT: Joi.number().required(),
       }),
     }), 
-    MessagesModule
+    MessagesModule,
+    DatabaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],
