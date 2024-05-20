@@ -3,11 +3,11 @@ import { ConfigModule } from '@nestjs/config';
 import { environments } from './environments';
 import config from './config';
 import * as Joi from 'joi';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MessagesModule } from './messages/messages.module';
 import { MessagesService } from './messages/services/messages.service';
-
 
 @Module({
   imports: [
@@ -24,6 +24,6 @@ import { MessagesService } from './messages/services/messages.service';
     MessagesModule
   ],
   controllers: [AppController],
-  providers: [AppService, MessagesService],
+  providers: [AppService],
 })
 export class AppModule {}
