@@ -4,7 +4,7 @@ import { Document } from "mongoose";
 @Schema()
 export class Message extends Document{
     @Prop()
-    menssage: string;
+    message: string;
 
     @Prop()
     chat_id: string;

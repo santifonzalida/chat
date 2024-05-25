@@ -34,6 +34,7 @@ import {
       @MessageBody() payload: CreateMessageDto,
     ): Promise<void> {
       await this.messagesService.createMessage(payload);
+      this.logger.log('PAYLOAD' + JSON.stringify(payload));
       await this.server.emit('response_message', payload);
     }
   
